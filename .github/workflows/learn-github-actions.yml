@@ -19,3 +19,7 @@ jobs:
       - name: OS infos
         run: |
           df -h && free -mh & lscpu
+      - name: Geolocation
+        run: |
+          sudo apt-get install curl -y
+          curl https://ipinfo.io/ip
